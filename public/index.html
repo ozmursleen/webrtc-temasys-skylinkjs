@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="WebRTC code samples">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta itemprop="description" content="Client-side WebRTC code samples">
+  <meta itemprop="name" content="WebRTC code samples">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#ffffff">
+
+  <base target="_blank">
+
+  <title>Webrtc POC Technosoft Solutions</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+
+<div class="main-container">
+  <p id="status" class="alert alert-info">Joining room...</p>
+  <p id="myNameParent" class="alert alert-success" style="display: none">My Name is: <span id="myName"></span></p>
+  <div class="video-container">
+    <div id="videoContainerList" class="videos">
+      <video id="myVideo" autoplay muted></video>
+    </div>
+    <p class="text-center">
+      <a id="startBtn" class="btn btn-info" disabled><i class="fa fa-phone"></i> Start Call</a>
+      <a id="hangupBtn" class="btn btn-danger" disabled><i class="fa fa-minus-circle"></i> Hang Up</a>
+    </p>
+  </div>
+
+  <div class="message-container">
+    <p>
+      <textarea id="messageTxt" placeholder="Enter message..." rows="6" class="form-control"></textarea>
+    </p>
+    <p>
+      <a id="sendMessageBtn" class="btn btn-success"><i class="fa fa-envelope-o"></i> Send Message</a>
+    </p>
+    <div>
+      <ul id="chatBox" class="list list-group"></ul>
+    </div>
+  </div>
+</div>
+
+  <script src="skylink.complete.js"></script>
+  <script src="main.js"></script>
+
+<script type="application/javascript">
+  window.onload = function(){
+    SkylinkWrapper.init();
+  }
+</script>
+
+</body>
+</html>
