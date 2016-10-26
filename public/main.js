@@ -14,8 +14,8 @@ var SkylinkWrapper = {
     that.myName = "me-"+that.randomString();
     that.$myName.innerHTML = that.myName;
     that.skylink.init({
-      apiKey: '2e3d547b-9d88-4be7-86ff-c2cfb2de3017', // developer key
-      defaultRoom: 'TS-POC' // default room
+      apiKey: 'YOUR_DEVELOPER_KEY',
+      defaultRoom: 'YOUR_DEFAULT_ROOM'
     }, function (error, success) {
       if (error) {
         console.error("ERROR", error, success);
